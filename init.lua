@@ -135,6 +135,10 @@ vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
 vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+-- Oil commands
+vim.keymap.set("n", "<leader>on", "<C-w>v<C-w>|<C-w>h50<C-w>>:Oil .<cr>", { desc = "Open Oil Navigator in [N]ew tab" })
+vim.keymap.set("n", "<leader>oo", ":Oil .<cr>", { desc = "Open Oil Navigator here" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
