@@ -763,7 +763,25 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+
+      -- I'm going to be trying new themes
+      -- Current favouites 'tokyonight-night' 'habamax' 'darkblue' 'unokai'
+      -- vim.cmd.colorscheme 'tokyonight-night'
+    end,
+  },
+
+  {
+    'sam4llis/nvim-tundra',
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+    config = function()
+      require('nvim-tundra').setup {
+        styles = {
+          comments = { italic = false },
+        },
+      }
+      -- I'm going to be trying new themes
+      -- Current favouites 'tokyonight-night' 'habamax' 'darkblue' 'unokai'
+      vim.cmd.colorscheme 'tundra'
     end,
   },
 
