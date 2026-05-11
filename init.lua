@@ -4,6 +4,10 @@ vim.g.maplocalleader = ' '
 
 vim.g.have_nerd_font = true
 
+--make vim not have RIDICULOUSLY HUGE tab spaces
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 -- Make line numbers default
 vim.o.number = true
 vim.o.relativenumber = true
@@ -535,7 +539,7 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         basedpyright = {},
         -- rust_analyzer = {},
@@ -794,6 +798,7 @@ require('lazy').setup({
           comments = { italic = false },
         },
       }
+      vim.g.tundra_biome = 'arctic'
       -- I'm going to be trying new themes
       -- Current favouites 'tokyonight-night' 'habamax' 'darkblue' 'unokai'
       vim.cmd.colorscheme 'tundra'
